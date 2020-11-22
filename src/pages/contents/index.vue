@@ -2,16 +2,19 @@
   <div class="contents">
     <Frame>
       <template v-slot:main>
-        <div>
-          ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
-        </div>
+        <p>main</p>
       </template>
-      <template v-slot:sub>さぶさぶ</template>
+      <template v-slot:sub>
+        <nuxt-link :to="{ name: 'index' }">index</nuxt-link>
+        <nuxt-link :to="{ name: 'clap' }">clap</nuxt-link>
+      </template>
     </Frame>
   </div>
 </template>
 
 <script>
+import firebase from '@/plugins/firebase';
+
 export default {
   layout: 'contents',
 };
