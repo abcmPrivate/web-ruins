@@ -9,7 +9,10 @@
           </form>
         </div>
       </template>
-      <template v-slot:sub>さぶさぶ</template>
+      <template v-slot:sub>
+        <nuxt-link :to="{ name: 'index' }">index</nuxt-link>
+        <nuxt-link :to="{ name: 'clap' }">clap</nuxt-link>
+      </template>
     </Frame>
   </div>
 </template>
@@ -22,13 +25,15 @@ export default {
   data() {
     return {
       clapMessage: '',
+      isSending: false,
     };
   },
   methods: {
     async send() {
       if (!this.clapMessage) return;
+
+      this.isSending = true;
       const functions = firebase.app().functions('asia-northeast1');
-      console.log(functions);
 
       const mailer = functions.httpsCallable('sendMail');
       await mailer({ message: this.clapMessage })
@@ -38,6 +43,7 @@ export default {
         .catch((err) => {
           console.log(err);
         });
+      this.isSending = false;
     },
   },
 };
