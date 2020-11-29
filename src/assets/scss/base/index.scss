@@ -2,4 +2,6 @@ body {
   background-color: $page-base;
   width: 100%;
   min-width: 320px;
+  -webkit-font-smoothing: none;
+  font-family: 'ＭＳ ゴシック', 'メイリオ', sans-serif;
 }
