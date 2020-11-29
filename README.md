@@ -2,7 +2,7 @@
 
 ## preview
 
-https://web-ruins.web.app/contents
+https://web-ruins.web.app/
 
 ## Build Setup
 
@@ -19,6 +19,13 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+```
+
+## deploy
+
+```bash
+$ npm run generate
+$ firebase deploy
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
