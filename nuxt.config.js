@@ -31,7 +31,19 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    'nuxt-basic-auth-module',
   ],
+
+  // basic auth (https://github.com/potato4d/nuxt-basic-auth-module#readme)
+  basic: {
+    name: 'yes',
+    pass: 'sushi',
+    enabled: true,
+    match({ url }) {
+      console.log((url || '').startsWith('/ura/contents'));
+      return (url || '').startsWith('/ura/contents');
+    },
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
