@@ -2,7 +2,7 @@
   <div class="clapImage">
     <figure class="clapImage-imageWrapper">
       <img :src="require(`~/assets/images/illust/${clapImage.path}`)" />
-      <figcaption>{{ clapImage.message }}</figcaption>
+      <figcaption class="clapImage-caption">{{ clapImage.message }}</figcaption>
     </figure>
   </div>
 </template>
@@ -18,4 +18,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.clapImage {
+  &-imageWrapper {
+    border: 1px solid $page-accent;
+  }
+  &-caption {
+    padding: 12px;
+    color: $page-caption;
+    font-size: 12px;
+  }
+}
+</style>
