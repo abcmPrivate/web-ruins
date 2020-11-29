@@ -5,3 +5,6 @@ body {
   -webkit-font-smoothing: none;
   font-family: 'ＭＳ ゴシック', 'メイリオ', sans-serif;
 }
+a {
+  @include link-hover;
+}

@@ -2,13 +2,20 @@
   <div class="index">
     <div class="index-container">
       <p>
-        このサイトはフランスパン中心のパンファンサイトです<nuxt-link
+        このサイトはフランスパン中心の<strong>パンファンサイト</strong>です<nuxt-link
           class="index-enter"
           :to="{ name: 'contents' }"
           >。</nuxt-link
         >
       </p>
       <p>公式とは一切関係がありません。</p>
+      <p>
+        また、
+        <a href="http://lctree.fc2web.com/poison/index.html" target="_blank">
+          毒吐きネットマナー
+        </a>
+        をご存じない方は一度熟読をお願いします。
+      </p>
       <p>OKな方は最初の文章の句点からお入りください。</p>
       <p>閲覧後に不快に感じる点があったとしても、管理人は一切責任を負いません。</p>
     </div>
