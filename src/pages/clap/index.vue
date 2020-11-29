@@ -1,6 +1,6 @@
 <template>
   <div class="clap">
-    <ClapImage :clap-image="randomImage" />
+    <ImageBlock :image-object="randomImage" />
     <div class="clap-wrapper">
       <p>拍手ありがとうございます🍞</p>
       <p>お礼絵は現在5種類です。</p>
@@ -28,12 +28,16 @@
         </form>
       </nuxt-link>
     </div>
+
+    <p class="clap-backWrapper">
+      <nuxt-link :to="{ name: 'contents' }">トップへ戻る</nuxt-link>
+    </p>
   </div>
 </template>
 
 <script>
 import firebase from '@/plugins/firebase';
-import ClapImage from '@/components/blocks/clapImage.vue';
+import ImageBlock from '@/components/blocks/image.vue';
 
 import { clapImage } from '@/settings/index.js';
 
@@ -43,7 +47,7 @@ const createKey = () => {
 
 export default {
   components: {
-    ClapImage,
+    ImageBlock,
   },
   asyncData() {
     return {
@@ -52,7 +56,6 @@ export default {
   },
   data() {
     return {
-      clapImage,
       clapMessage: '',
       isSending: false,
       randomKey: 0,
@@ -125,6 +128,10 @@ export default {
   &-textFormArea {
     width: 100%;
     max-width: 320px;
+  }
+
+  &-backWrapper {
+    margin-top: 20px;
   }
 }
 </style>

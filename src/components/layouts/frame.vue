@@ -10,17 +10,14 @@
   </div>
 </template>
 <script>
-const DEFAULT_WIDTH = 200;
+const DEFAULT_WIDTH = 280;
+
 export default {
-  data() {
-    return {
-      navWidth: DEFAULT_WIDTH,
-    };
-  },
   computed: {
     subStyle() {
+      const navWidth = this.$store.state.navWidth;
       return {
-        width: `${this.navWidth}px`,
+        width: `${navWidth}px`,
       };
     },
   },
@@ -28,20 +25,20 @@ export default {
     onDragBorder(e) {
       const width = e.clientX;
 
-      // 200px未満にしない
+      // default未満にしない
       if (width <= DEFAULT_WIDTH) {
-        this.navWidth = DEFAULT_WIDTH;
+        this.$store.dispatch('resetNavWidth');
         return;
       }
 
       // 画面幅の50%は超えさせない
       const half = window.innerWidth / 2;
       if (width >= half) {
-        this.navWidth = half;
+        this.$store.dispatch('updateNavWidth', half);
         return;
       }
 
-      this.navWidth = width;
+      this.$store.dispatch('updateNavWidth', width);
     },
     onDragOverBorder(e) {
       e.preventDefault();

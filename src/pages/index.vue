@@ -2,7 +2,7 @@
   <div class="index">
     <div class="index-container">
       <p>
-        このサイトはフランスパン中心の<strong>パンファンサイト</strong>です<nuxt-link
+        このサイトは食事パン中心の<strong>パンファンサイト</strong>です<nuxt-link
           class="index-enter"
           :to="{ name: 'contents' }"
           >。</nuxt-link

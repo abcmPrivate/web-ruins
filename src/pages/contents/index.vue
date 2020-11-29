@@ -1,20 +1,10 @@
 <template>
   <div class="contents">
-    <Frame>
-      <template v-slot:main>
-        <p>main</p>
-      </template>
-      <template v-slot:sub>
-        <nuxt-link :to="{ name: 'index' }">index</nuxt-link>
-        <nuxt-link :to="{ name: 'clap' }">clap</nuxt-link>
-      </template>
-    </Frame>
+    <p>ほげほげ</p>
   </div>
 </template>
 
 <script>
-import firebase from '@/plugins/firebase';
-
 export default {
   layout: 'contents',
 };
@@ -22,6 +12,13 @@ export default {
 
 <style lang="scss" scoped>
 .contents {
-  display: flex;
+  height: 100%;
+  background: {
+    image: url('~assets/images/illust/pan_bread_set.png');
+    color: rgba($page-base, 0.3);
+    blend-mode: lighten;
+    repeat: no-repeat;
+    position: right bottom;
+  }
 }
 </style>
