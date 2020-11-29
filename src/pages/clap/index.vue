@@ -1,8 +1,33 @@
 <template>
   <div class="clap">
     <ClapImage :clap-image="randomImage" />
-    <input type="text" :disabled="isSending" v-model="clapMessage" />
-    <button type="button" :disabled="isSending" @click="sendMessage">{{ buttonText }}</button>
+    <div class="clap-wrapper">
+      <p>拍手ありがとうございます🍞</p>
+      <p>お礼絵は現在5種類です。</p>
+      <nuxt-link v-slot="{ href }" :to="{ name: 'clap' }">
+        <form :action="href" method="POST" @submit.prevent class="clap-form">
+          <div class="clap-buttonWrapper">
+            <button type="submit" :disabled="isSending" @click="onClap">
+              {{ buttonText }}
+            </button>
+          </div>
+
+          <fieldset class="clap-textFormWrapper">
+            <label for="clap-message" class="clap-textFormLabel">
+              メッセージがあればどうぞ（任意）
+            </label>
+            <textarea
+              id="clap-message"
+              type="text"
+              cols="30"
+              rows="3"
+              :disabled="isSending"
+              v-model="clapMessage"
+            />
+          </fieldset>
+        </form>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
@@ -35,13 +60,17 @@ export default {
   },
   computed: {
     buttonText() {
-      return this.isSending ? '送信中' : 'メッセージを送る';
+      return this.isSending ? '送信中' : '拍手を送る';
     },
     randomImage() {
       return clapImage[this.randomKey];
     },
   },
   methods: {
+    onClap() {
+      this.sendMessage();
+      this.updateImage();
+    },
     async sendMessage() {
       if (!this.clapMessage) return;
       this.isSending = true;
@@ -69,5 +98,33 @@ export default {
 <style lang="scss" scoped>
 .clap {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  &-wrapper {
+    margin-top: 20px;
+  }
+  &-form {
+    margin-top: 32px;
+  }
+  &-textFormWrapper {
+    border: 0;
+    margin: 12px 0 0 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-textFormLabel {
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: $page-caption;
+  }
+  &-textFormArea {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 </style>

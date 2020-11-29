@@ -1,9 +1,11 @@
-$mono-black: #000;
-$mono-white: #fff;
+$mono-black: black;
+$mono-gray: gray;
+$mono-white: white;
 
-$green-teal: teal;
-$blue-mediumturquoise: mediumturquoise;
+$orange-darkorange: darkorange;
+$orange-burlywood: burlywood;
 
 $page-base: $mono-white;
-$page-accent: $green-teal;
-$page-sub: $blue-mediumturquoise;
+$page-accent: $orange-darkorange;
+$page-sub: $orange-burlywood;
+$page-caption: $mono-gray;

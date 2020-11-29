@@ -37,6 +37,6 @@ export default {
   build: {},
 
   styleResources: {
-    scss: ['./assets/scss/variables/index.scss'],
+    scss: ['./assets/scss/variables/index.scss', './assets/scss/mixins/index.scss'],
   },
 };
