@@ -1,9 +1,7 @@
 <template>
   <Frame>
     <template v-slot:main>
-      <div class="sec-main">
-        <Nuxt />
-      </div>
+      <Nuxt />
     </template>
     <template v-slot:sub>
       <Navigation />
@@ -22,11 +20,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.sec-main {
-  padding: 32px 16px;
-  height: 100%;
-  box-sizing: border-box;
-}
-</style>

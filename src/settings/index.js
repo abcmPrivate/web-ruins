@@ -1,3 +1,13 @@
+export const news = [
+  {
+    date: '20/12/4',
+    text: 'サイトOPEN',
+  },
+  {
+    date: '20/12/3',
+    text: 'イラスト追加',
+  },
+];
 export const clapImage = [
   {
     path: 'bread_syokupan_medamayaki.png',

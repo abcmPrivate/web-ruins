@@ -1,22 +1,26 @@
 <template>
   <div class="index">
-    <h1>ruins shadow</h1>
+    <Logo tag="h1" text="Ruins shadow" size="large" />
     <div class="index-container">
       <p>表側に置けない別ジャンルのものを置いています。</p>
       <p>なんでも許せる人向け。</p>
       <p>OKな人は以下の情報を入力してお入りください。</p>
       <p>ユーザー名： yes</p>
-      <p>パスワード： 管理人の好きな日本食（ローマ字で5文字）</p>
     </div>
 
     <div class="index-bannerWrapper">
-      <a href="/ura/contents">入室する</a>
+      <a href="/ura/contents">enter?</a>
     </div>
   </div>
 </template>
 
 <script>
+import Logo from '@/components/elements/logo.vue';
+
 export default {
+  components: {
+    Logo,
+  },
   layout: 'ura',
   methods: {
     onClickDummy() {

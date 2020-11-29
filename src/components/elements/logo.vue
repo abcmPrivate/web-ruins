@@ -14,7 +14,7 @@ export default {
     },
     size: {
       type: String,
-      validator: (size) => ['default', 'small'].includes(size),
+      validator: (size) => ['default', 'small', 'large'].includes(size),
       default: 'default',
     },
   },
@@ -37,6 +37,9 @@ export default {
   }
   &.size-small {
     font-size: 24px;
+  }
+  &.size-large {
+    font-size: 48px;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="clap">
-    <ImageBlock :image-object="randomImage" />
+    <ImageBlock class="clap-image" :image-object="randomImage" />
     <div class="clap-wrapper">
       <p>拍手ありがとうございます🍞</p>
       <p>お礼絵は現在5種類です。</p>
@@ -107,6 +107,9 @@ export default {
   text-align: center;
   &-wrapper {
     margin-top: 20px;
+  }
+  &-image {
+    border: 1px solid $page-accent;
   }
   &-form {
     margin-top: 32px;

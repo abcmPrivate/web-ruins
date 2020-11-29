@@ -7,3 +7,8 @@ body {
 a {
   @include link-hover;
 }
+p {
+  & + & {
+    margin-top: 8px;
+  }
+}

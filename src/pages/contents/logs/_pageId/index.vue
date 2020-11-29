@@ -40,6 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 .logs {
+  padding: 32px 16px;
   &-items {
     list-style: none;
     padding: 0;

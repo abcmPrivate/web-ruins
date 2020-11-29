@@ -1,8 +1,9 @@
 <template>
   <div class="index">
     <div class="index-container">
+      <Logo size="large" text="Ruins" />
       <p>
-        このサイトは食事パン中心の<strong>パンファンサイト</strong>です<nuxt-link
+        Ruinsは食事パン中心の<strong>パンイラストサイト</strong>です<nuxt-link
           class="index-enter"
           :to="{ name: 'contents' }"
           >。</nuxt-link
@@ -26,11 +27,20 @@
         <span>enter?</span>
       </button>
     </div>
+
+    <div class="index-since">
+      <p>since 2020/12/4</p>
+    </div>
   </div>
 </template>
 
 <script>
+import Logo from '@/components/elements/logo.vue';
+
 export default {
+  components: {
+    Logo,
+  },
   methods: {
     onClickDummy() {
       alert('注意文を読んでください！！！！！！！！！！！');
@@ -75,6 +85,9 @@ export default {
         color: $page-accent;
       }
     }
+  }
+  &-since {
+    margin-top: 20px;
   }
 }
 </style>

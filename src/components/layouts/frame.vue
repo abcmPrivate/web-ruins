@@ -57,12 +57,17 @@ export default {
     height: 100%;
     overflow: hidden scroll;
   }
+  %-frame {
+    padding: 32px 16px;
+    box-sizing: border-box;
+  }
   &-main {
     @extend %-common;
     flex: 1;
   }
   &-sub {
     @extend %-common;
+    @extend %-frame;
     flex-shrink: 0;
   }
   &-border {

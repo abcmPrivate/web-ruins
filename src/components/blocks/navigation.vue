@@ -6,7 +6,7 @@
       </nuxt-link>
       <ul class="navigation-links">
         <li class="navigation-linkItem">
-          <nuxt-link :to="{ name: 'contents' }">about</nuxt-link>
+          <nuxt-link :to="{ name: 'contents' }">top</nuxt-link>
         </li>
         <li class="navigation-linkItem">
           <nuxt-link :to="{ name: 'contents-bkm' }">bkm</nuxt-link>
@@ -53,8 +53,6 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  box-sizing: border-box;
-  padding: 32px 16px;
   height: 100%;
   &-index {
     text-decoration: none;
