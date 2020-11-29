@@ -5,3 +5,9 @@
   box-sizing: border-box;
   padding: 32px 16px;
 }
+@mixin link-hover {
+  color: inherit;
+  &:hover {
+    color: $page-accent;
+  }
+}
