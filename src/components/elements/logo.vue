@@ -1,5 +1,5 @@
 <template>
-  <p :is="tag" class="logo" :class="sizeClass">{{ text }}</p>
+  <p :is="tag" class="logo" :class="[sizeClass, themeClass]">{{ text }}</p>
 </template>
 <script>
 export default {
@@ -17,10 +17,18 @@ export default {
       validator: (size) => ['default', 'small', 'large'].includes(size),
       default: 'default',
     },
+    theme: {
+      type: String,
+      validator: (theme) => ['default', 'ura'].includes(theme),
+      default: 'default'
+    },
   },
   computed: {
     sizeClass() {
       return `size-${this.size}`;
+    },
+    themeClass() {
+      return `theme-${this.theme}`;
     },
   },
 };
@@ -40,6 +48,10 @@ export default {
   }
   &.size-large {
     font-size: 48px;
+  }
+
+  &.theme-ura {
+    color: $page-ura-accent;
   }
 }
 </style>

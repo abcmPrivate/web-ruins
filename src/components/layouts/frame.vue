@@ -3,7 +3,13 @@
     <main class="frame-main">
       <slot name="main" />
     </main>
-    <div class="frame-border" draggable @drag="onDragBorder" @dragover="onDragOverBorder"></div>
+    <div
+      class="frame-border"
+      :class="themeClass"
+      draggable
+      @drag="onDragBorder"
+      @dragover="onDragOverBorder"
+    ></div>
     <nav class="frame-sub" :style="subStyle">
       <slot name="sub" />
     </nav>
@@ -13,6 +19,13 @@
 const DEFAULT_WIDTH = 280;
 
 export default {
+  props: {
+    theme: {
+      type: String,
+      validator: (theme) => ['default', 'ura'].includes(theme),
+      default: 'default',
+    },
+  },
   computed: {
     subStyle() {
       const navWidth = this.$store.state.navWidth;
@@ -20,6 +33,9 @@ export default {
         width: `${navWidth}px`,
       };
     },
+    themeClass() {
+      return `theme-${this.theme}`
+    }
   },
   methods: {
     onDragBorder(e) {
@@ -94,6 +110,9 @@ export default {
     }
     @include mq-max {
       display: none;
+    }
+    &.theme-ura {
+      background-color: $page-ura-accent;
     }
   }
 }

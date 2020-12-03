@@ -58,3 +58,98 @@ export const logs = {
     },
   ],
 };
+
+export const uraLogs = {
+  1: [
+    {
+      path: 'food_chirashizushi.png',
+      caption: 'ちらし寿司は華やかで好きです',
+    },
+    {
+      path: 'food_makizushi.png',
+      caption: '',
+    },
+    {
+      path: 'food_sushi_temari.png',
+      caption: '',
+    },
+    {
+      path: 'inarizushi.png',
+      caption: 'いなりは蕎麦入りが好き',
+    },
+    {
+      path: 'sushi_california_roll.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_kazari_makizushi.png',
+      caption: '',
+    },
+  ],
+  2: [
+    {
+      path: 'food_sushi.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_aburi_engawa.png',
+      caption: '一番好きなお寿司です',
+    },
+    {
+      path: 'sushi_amaebi.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_battera.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_chutoro.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_hamburg.png',
+      caption: '',
+    },
+  ],
+  3: [
+    {
+      path: 'sushi_harasu.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_iwashi.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_kai_hokkigai.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_katsuo.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_menegi.png',
+      caption: '',
+    },
+  ],
+  4: [
+    {
+      path: 'sushi_nodoguro.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_tai.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_tamago.png',
+      caption: '',
+    },
+    {
+      path: 'sushi_unagi_nori.png',
+      caption: '',
+    },
+  ],
+};

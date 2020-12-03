@@ -45,7 +45,6 @@ export default {
   basic: {
     name: 'yes',
     pass: 'sushi',
-    message: 'password hint: 管理人の好きな日本食(ローマ字で五文字)',
     enabled: true,
     match({ url }) {
       return (url || '').startsWith('/ura/contents');

@@ -1,11 +1,11 @@
 <template>
   <div class="index">
-    <Logo tag="h1" text="Ruins shadow" size="large" />
+    <Logo tag="h1" text="Ruins shadow" size="large" theme="ura" />
     <div class="index-container">
       <p>表側に置けない別ジャンルのものを置いています。</p>
-      <p>なんでも許せる人向け。</p>
       <p>OKな人は以下の情報を入力してお入りください。</p>
       <p>ユーザー名： yes</p>
+      <p>パスワード：このページのリンクになっていたアイコン（ローマ字で5文字）</p>
     </div>
 
     <div class="index-bannerWrapper">
@@ -20,13 +20,6 @@ import Logo from '@/components/elements/logo.vue';
 export default {
   components: {
     Logo,
-  },
-  layout: 'ura',
-  methods: {
-    onClickDummy() {
-      alert('注意文を読んでください！！！！！！！！！！！');
-      location.href = 'https://yahoo.co.jp/';
-    },
   },
 };
 </script>
