@@ -30,3 +30,16 @@ export const clapImage = [
     caption: 'メロンパンです🍈',
   },
 ];
+
+export const bkm = [
+  {
+    href: 'https://www.irasutoya.com/',
+    banner: '',
+    name: 'いらすとや',
+  },
+  {
+    href: 'https://qiita.com/',
+    banner: '',
+    name: 'Qiita',
+  },
+];
