@@ -4,10 +4,23 @@
   min-width: 320px;
   box-sizing: border-box;
   padding: 32px 16px;
+  margin: 0 auto;
 }
 @mixin link-hover {
   color: inherit;
   &:hover {
     color: $page-accent;
+  }
+}
+
+@mixin mq-min($breakpoint: $breakpoints-pc) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin mq-max($breakpoint: $breakpoints-sp) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
   }
 }

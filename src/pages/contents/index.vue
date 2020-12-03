@@ -7,7 +7,10 @@
     <div class="contents-section">
       <Logo class="contents-sectionHeading" text="about" size="small" />
       <div class="contents-link">
-        <p>Ruinsは食事パン中心の<strong>パンファンサイト</strong>です。</p>
+        <p>
+          Ruinsは食事パン中心の
+          <strong>パンファンサイト</strong>です。
+        </p>
         <p>link free</p>
         <dl class="contents-linkInfo">
           <div class="contents-linkInfoItem">
@@ -21,7 +24,7 @@
           <div class="contents-linkInfoItem">
             <dt>banner</dt>
             <dd>
-              <img src="#" width="200" height="40" />
+              <img src="banner.gif" alt="Ruins" width="200" height="40" />
               <p>https://web-ruins.web.app/banner.gif</p>
             </dd>
           </div>
@@ -30,13 +33,18 @@
     </div>
     <div class="contents-section">
       <Logo class="contents-sectionHeading" text="me" size="small" />
-      <p>えび / 199x.5 / webruinsmailer🍞gmail.com<br />好きなものはパンと寿司</p>
+      <p>
+        えび / 199x.5 / webruinsmailer🍞gmail.com
+        <br />好きなものはパンと寿司
+      </p>
 
       <p>
         何かありましたら
-        <nuxt-link :to="{ name: 'clap' }">clap</nuxt-link>
-        かメール(🍞->@)へお願いします
+        <nuxt-link :to="{ name: 'clap' }">clap</nuxt-link>かメール(🍞->@)へお願いします
       </p>
+    </div>
+    <div class="contents-section is-ura">
+      <nuxt-link :to="{ name: 'ura' }">🍣</nuxt-link>
     </div>
   </div>
 </template>
@@ -63,6 +71,7 @@ export default {
 .contents {
   padding: 32px 16px;
   overflow: hidden scroll;
+  height: 100%;
   background: {
     image: url('~assets/images/illust/pan_bread_set.png');
     color: rgba($page-base, 0.3);
@@ -74,6 +83,9 @@ export default {
   &-section {
     & + & {
       margin-top: 48px;
+    }
+    &.is-ura {
+      margin-top: 100vh;
     }
   }
   &-sectionHeading {

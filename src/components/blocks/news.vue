@@ -1,5 +1,5 @@
 <template>
-  <textarea class="news" v-model="news" cols="20" rows="3" />
+  <textarea class="news" v-model="news" cols="25" rows="3" />
 </template>
 <script>
 export default {

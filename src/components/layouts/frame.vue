@@ -53,13 +53,27 @@ export default {
   width: 100%;
   height: 100vh;
 
+  @include mq-max {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
   %-common {
     height: 100%;
     overflow: hidden scroll;
+    @include mq-max {
+      height: auto;
+      overflow: auto;
+    }
   }
   %-frame {
     padding: 32px 16px;
     box-sizing: border-box;
+
+    @include mq-max {
+      padding: 12px;
+      overflow: auto;
+    }
   }
   &-main {
     @extend %-common;
@@ -77,6 +91,9 @@ export default {
     background-color: $page-accent;
     &:hover {
       cursor: col-resize;
+    }
+    @include mq-max {
+      display: none;
     }
   }
 }

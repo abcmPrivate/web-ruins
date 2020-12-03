@@ -3,18 +3,14 @@
     <div class="index-container">
       <Logo size="large" text="Ruins" />
       <p>
-        Ruinsは食事パン中心の<strong>パンイラストサイト</strong>です<nuxt-link
-          class="index-enter"
-          :to="{ name: 'contents' }"
-          >。</nuxt-link
-        >
+        Ruinsは食事パン中心の
+        <strong>パンイラストサイト</strong>です
+        <nuxt-link class="index-enter" :to="{ name: 'contents' }">。</nuxt-link>
       </p>
       <p>公式とは一切関係がありません。</p>
       <p>
         また、
-        <a href="http://lctree.fc2web.com/poison/index.html" target="_blank">
-          毒吐きネットマナー
-        </a>
+        <a href="http://lctree.fc2web.com/poison/index.html" target="_blank">毒吐きネットマナー</a>
         をご存じない方は一度熟読をお願いします。
       </p>
       <p>OKな方は最初の文章の句点からお入りください。</p>
@@ -23,7 +19,7 @@
 
     <div class="index-bannerWrapper">
       <button type="button" class="index-banner" @click="onClickDummy">
-        <img src="#" width="200" height="40" />
+        <img src="banner.gif" alt="Ruins" width="200" height="40" />
         <span>enter?</span>
       </button>
     </div>
